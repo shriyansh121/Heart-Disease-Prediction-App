@@ -11,7 +11,7 @@ st.image(image_path, width=700)
 # Get age from user
 age = st.sidebar.number_input('Enter your age', min_value=1, max_value=150, step=1)
 sex = st.sidebar.selectbox("Sex:",("Male", "Female"))
-cp = st.sidebar.selectbox("Chest Pain: ",("Atypical Angina", "Non-anginal pain", "Typical angina"))
+cp = st.sidebar.selectbox("Chest Pain: ",("Atypical Angina", "Non-anginal pain", "Typical angina","asymptomatic"))
 trestbps = st.sidebar.slider("Enter your resting blood sugar", 50,250)
 chol = st.sidebar.slider("Enter your Cholestrol: ", 0,  250)
 fbs = st.sidebar.selectbox("Blood Sugar: ",("Greater than 120mg/dl", "Lower than 120mg/dl"))
