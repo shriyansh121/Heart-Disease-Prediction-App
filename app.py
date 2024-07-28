@@ -11,7 +11,7 @@ st.image(image_path, width=700)
 # Get age from user
 age = st.sidebar.number_input('Enter your age', min_value=1, max_value=150, step=1)
 sex = st.sidebar.selectbox("Sex:",("Male", "Female"))
-cp = st.sidebar.selectbox("Chest Pain: ",("Atypical Angina", "Non-anginal pain", "Typical angina","asymptomatic"))
+cp = st.sidebar.selectbox("Chest Pain: ",("Atypical Angina", "Non-anginal pain", "Typical angina","Asymptomatic"))
 trestbps = st.sidebar.slider("Enter your resting blood sugar", 50,250)
 chol = st.sidebar.slider("Enter your Cholestrol: ", 0,  250)
 fbs = st.sidebar.selectbox("Blood Sugar: ",("Greater than 120mg/dl", "Lower than 120mg/dl"))
@@ -45,7 +45,7 @@ def predict_disease(user_data):
 
 # Mapping user input to the expected numerical or categorical codes
 sex_mapping = {'Male': 1, 'Female': 0}
-cp_mapping = {'Typical angina': 0, 'Atypical Angina': 1, 'Non-anginal pain': 2}
+cp_mapping = {'Typical angina': 3, 'Atypical Angina': 1, 'Non-anginal pain': 2, 'Asymptomatic':0}
 fbs_mapping = {'Greater than 120mg/dl': 1, 'Lower than 120mg/dl': 0}
 restecg_mapping = {'Value 0: showing probable or definite left ventricular hypertrophy by Estes’ criteria': 0, 'Value 1: normal': 1, 'Value 2: having ST-T wave abnormality (T wave inversions and/or ST elevation or depression of > 0.05 mV)': 2}
 exang_mapping = {'Yes': 1, 'No': 0}
