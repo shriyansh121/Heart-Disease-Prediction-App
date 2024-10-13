@@ -29,9 +29,9 @@ y = data["target"]
 x_train,x_test,y_train,y_test = train_test_split(x,y,test_size=0.2,random_state=5)
 
 from sklearn.naive_bayes import GaussianNB
-dt= DecisionTreeClassifier()
-dt.fit(x_train,y_train)
-pred = dt.predict(x_test)
+nb = GuassianNB()
+nb.fit(x_train,y_train)
+pred = nb.predict(x_test)
 score_nb = round(accuracy_score(pred,y_test)*100,2)
 
 
